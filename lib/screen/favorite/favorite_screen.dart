@@ -10,10 +10,7 @@ class FavoriteScreen extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('元の場所へ route'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          child: Text('元の場所へ route')
         ),
       ),
     );

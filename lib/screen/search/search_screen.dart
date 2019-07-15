@@ -10,11 +10,7 @@ class SearchScreen extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('検索へ route'),
-          onPressed: () {
-            Navigator.pushNamed(context, '/favorite');
-            // Navigate to second route when tapped.
-          },
+          child: Text('検索へ route')
         ),
       ),
     );
