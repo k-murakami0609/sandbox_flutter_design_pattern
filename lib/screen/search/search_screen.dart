@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_design_pattern/screen/repository/user_repository_screen.dart';
 
 class UserData {
   String _name;
@@ -23,7 +24,7 @@ class UserData {
 class SearchScreen extends StatelessWidget {
   final List<UserData> users = [
     UserData("name", "description"),
-    UserData("name2", "description2"),
+    UserData("name12", "description3"),
   ];
 
   @override
@@ -41,10 +42,16 @@ class SearchScreen extends StatelessWidget {
               subtitle: Text(
                 user._description
               ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserRepositoryScreen()),
+                );
+              }
             )
           )
-        ).toList(),
-      )
+        ).toList()
+      ),
     );
   }
 }
