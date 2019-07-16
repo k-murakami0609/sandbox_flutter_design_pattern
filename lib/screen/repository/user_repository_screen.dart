@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_design_pattern/screen/repository/repository_view_screen.dart';
 import 'package:flutter_design_pattern/screen/repository/user_repository_screen.dart';
 
 class UserRepositoryData {
@@ -45,7 +46,7 @@ class UserRepositoryScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => UserRepositoryScreen()),
+                          MaterialPageRoute(builder: (context) => RepositoryViewScreen()),
                         );
                       }
                   )
