@@ -31,7 +31,7 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('検索 Route'),
+        title: Text('お気に入り'),
       ),
       body: ListView(
           children: users

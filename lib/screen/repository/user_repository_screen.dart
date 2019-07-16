@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_design_pattern/screen/repository/repository_view_screen.dart';
-import 'package:flutter_design_pattern/screen/repository/user_repository_screen.dart';
 
 class UserRepositoryData {
   String _repositoryName;
@@ -32,27 +31,23 @@ class UserRepositoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('検索 Route'),
+        title: Text('ユーザーレポジトリ'),
       ),
       body: ListView(
-          children: users.map((user) =>
-              Card(
+          children: users
+              .map((user) => Card(
                   child: ListTile(
                       leading: FlutterLogo(size: 72.0),
                       title: Text(user._repositoryName),
-                      subtitle: Text(
-                          user._url
-                      ),
+                      subtitle: Text(user._url),
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => RepositoryViewScreen()),
+                          MaterialPageRoute(
+                              builder: (context) => RepositoryViewScreen()),
                         );
-                      }
-                  )
-              )
-          ).toList()
-      ),
+                      })))
+              .toList()),
     );
   }
 }

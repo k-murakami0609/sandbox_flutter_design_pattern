@@ -31,27 +31,23 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('検索 Route'),
+        title: Text('検索'),
       ),
       body: ListView(
-        children: users.map((user) => 
-          Card(
-            child: ListTile(
-              leading: FlutterLogo(size: 72.0),
-              title: Text(user._name),
-              subtitle: Text(
-                user._description
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => UserRepositoryScreen()),
-                );
-              }
-            )
-          )
-        ).toList()
-      ),
+          children: users
+              .map((user) => Card(
+                  child: ListTile(
+                      leading: FlutterLogo(size: 72.0),
+                      title: Text(user._name),
+                      subtitle: Text(user._description),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UserRepositoryScreen()),
+                        );
+                      })))
+              .toList()),
     );
   }
 }

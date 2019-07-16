@@ -7,7 +7,7 @@ class RepositoryViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Second Route'),
+        title: Text('レポジトリ'),
       ),
       body: WebView(
         initialUrl: 'https://flutter.io',
